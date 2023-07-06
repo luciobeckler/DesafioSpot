@@ -1,17 +1,16 @@
-import './ImageHolder.css'
-
+import './ImageHolder.css';
 import React, { useState, useEffect } from 'react';
 
-const ImageHolder = (urlWeb, urlMobile, alt) => {
+const ImageHolder = (props) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [imageUrl, setImageUrl] = useState('');
-    const [urlFinal, seturlFinal] = useState('')
-
+    const [urlFinal, setUrlFinal] = useState('');
 
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
+
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -20,20 +19,16 @@ const ImageHolder = (urlWeb, urlMobile, alt) => {
     }, []);
 
     useEffect(() => {
-        if (windowWidth >= 600) {
-            setImageUrl(urlWeb);
-            seturlFinal(imageUrl.urlWeb);
-            console.log(urlFinal)
+        if (windowWidth > 600) {
+            setImageUrl(props.urlWeb);
+            setUrlFinal(props.urlWeb);
         } else {
-            setImageUrl(urlMobile);
-            seturlFinal(imageUrl.urlMobile);
-            console.log(urlFinal)
+            setImageUrl(props.urlMobile);
+            setUrlFinal(props.urlMobile);
         }
+    }, [windowWidth, props.urlWeb, props.urlMobile]);
 
-    }, [windowWidth]);
-
-
-    return <img className='imagem' src={urlFinal} alt={alt}></img>
+    return <img className='imagem' src={urlFinal} alt={props.alt} />;
 };
 
 export default ImageHolder;
