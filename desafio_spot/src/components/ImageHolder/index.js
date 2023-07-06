@@ -2,15 +2,16 @@ import './ImageHolder.css'
 
 import React, { useState, useEffect } from 'react';
 
-const MyComponent = (urlWeb, urlMobile, alt) => {
+const ImageHolder = (urlWeb, urlMobile, alt) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [imageUrl, setImageUrl] = useState('');
+    const [urlFinal, seturlFinal] = useState('')
+
 
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
-
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -19,16 +20,20 @@ const MyComponent = (urlWeb, urlMobile, alt) => {
     }, []);
 
     useEffect(() => {
-        if (windowWidth < 600) {
-            setImageUrl(urlMobile);
-            console.log(urlWeb)
-        } else {
+        if (windowWidth >= 600) {
             setImageUrl(urlWeb);
-            console.log(urlWeb)
+            seturlFinal(imageUrl.urlWeb);
+            console.log(urlFinal)
+        } else {
+            setImageUrl(urlMobile);
+            seturlFinal(imageUrl.urlMobile);
+            console.log(urlFinal)
         }
-    }, [windowWidth, urlMobile, urlWeb]);
 
-    return <img className='imagem' style={{ backgroundImage: '/imagens/web/segundoBanner.png' }} alt={alt} />;
+    }, [windowWidth]);
+
+
+    return <img className='imagem' src={urlFinal} alt={alt}></img>
 };
 
-export default MyComponent;
+export default ImageHolder;
