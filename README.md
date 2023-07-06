@@ -16,3 +16,4 @@ Repositório criado para a realização do desafio passado pela empresa Spot par
       
     O site da V4 já parece contar com armazenamento de cache para o carregamento mais rápido e também com priorização de carregamento perceptível principalmente no formulário, na section abaixo dele e na parte dos clientes aparenta ser um carregamento feito para ser elegante. Para finalizar fica claro que o site possui muitos componentes com movimento, o que reduz bastante o desempenho e quando usado em excesso, como é o caso, incomoda o usuário com tantas coisas se movendo na tela, atrapalhando o foco.  
     
+ ```
