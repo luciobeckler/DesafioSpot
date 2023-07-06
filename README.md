@@ -13,6 +13,15 @@ Repositório criado para a realização do desafio passado pela empresa Spot par
       
     Além disso o site é muito escuro e apesar de ser um concenso entre os programadores, o dark mode não é bem visto pelos usuários convencionais, já ouvi dizer que sites mais escuros afetam também afetam psicologicamente a percepção de tempo de carregamento, já que o olho do usuário estaria acostumado a um ambiente claro.
       
-    O site da V4 já parece contar com armazenamento de cache para o carregamento mais rápido e também com priorização de carregamento perceptível principalmente no formulário, na section abaixo dele e na parte dos clientes aparenta ser um carregamento feito para ser elegante. Para finalizar fica claro que o site possui muitos componentes com movimento, o que reduz bastante o desempenho e quando usado em excesso, como é o caso, incomoda o usuário com tantas coisas se movendo na tela, atrapalhando o foco.  
-    
+    O site da V4 já parece contar com armazenamento de cache para o carregamento mais rápido e também com priorização de carregamento perceptível principalmente no formulário, na section abaixo dele e na parte dos clientes aparenta ser um carregamento feito para ser elegante. Para finalizar fica claro que o site possui muitos componentes com movimento, o que reduz bastante o desempenho e quando usado em excesso, como é o caso, incomoda o usuário com tantas coisas se movendo na tela, atrapalhando o foco.
+
+
+
+#### Questão 2: Explique de forma bem resumida ou em um esquema como você poderia utilizar um APP Builder (ex.: Retool | Build internal tools, remarkably fast.) para otimizar processos de uma agência de marketing (será avaliado a ideia de automatização e a explicação do que seria necessário fazer no APP Builder para criar a solução)
+
+
+  - Automatizar envios de e-mails e mensagens
+  - Geração de cupons de desconto para clientes que tiveram problemas com a compra, todo cliente que teve que devolver a compra pelos motivos x,y e z receberá um cupon para voltar a comprar com a mesma marca. Para categorizar o problema que o cliente teve com base em uma descrição escrita podemos utilizar uma integraçao com o gpt-4 para que o mesmo faça essa categorização com base em problemas pré estabelecidos ou retornando undefined caso não consiga estabelecer uma conexão.
+  - 
+![Uploading image.png…]()
 
